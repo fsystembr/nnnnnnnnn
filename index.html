@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Bio Links da Recrear no Lar.">
+    <meta name="keywords" content="Recreação, recrear no lar, festa crianças, diversão crianças, brincar, contação de histórias">
+    <meta name="author" content="Liracode">
+    <title>WebKit Demo</title>
+    <!-- Import css -->
+	<link rel="stylesheet" href="./assets/css/styles.css">
+	<link href="assets/css/all.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="wrapper">
+    <div class="profile-container">
+        <h1>WebKit Demo</h1>
+    </div>
+
+<div class="link-container">
+
+            <h2>Examples:</h2>
+            <div class="button bt-green">
+                <a class="btn"  
+                href="#" 
+                target="_blank">
+                    <h3><i class="fa-brands fa-whatsapp" style="font-size: 22px;"></i> Demo brand</h3></a>
+            </div>
+            <div class="button bt-blue" >
+                <a class="btn"  href="#" target="_blank"><h3><i class="fa-regular fa-globe-pointer"></i> Demo regular</h3></a>
+            </div>
+            <div class="button bt-orange">
+                <a class="btn" href="#" target="_blank"><h3><i class="fa-solid fa-circle-info"></i> Demo free</h3></a>
+            </div>
+            
+  <div class="social-icons">
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+
+<!-- Toggle Light/Dark -->
+<div class="toggle-container">
+<label class="toggle-icons"><i class="fa-solid fa-sun-bright"></i></label>
+<label class="switch">
+<input type="checkbox" id="theme-switch" onchange="toggleView()">
+<span class="slider-btn"></span>
+</label>
+<label class="toggle-icons"><i class="fa-solid fa-moon-cloud"></i></label>
+</div>
+<footer>
+    WebKit Demo © 2024 FsystemBR<br>Desenvolvido por: <a href="#">FsystemBR</a>
+</footer>
+</div>
+</div>
+
+<script>
+    const toogleTheme = document.getElementById("theme-switch");
+    const element = document.body;
+   document.addEventListener("DOMContentLoaded", () => {
+
+    if (localStorage.getItem("dark") == "true") {
+        toogleTheme.checked = true;
+        element.classList.add("dark");
+    } else {
+        element.classList.remove("dark");
+        toogleTheme.checked = false;
+    }
+   });
+
+function toggleView() {
+  
+  if (toogleTheme.checked== true){
+    element.classList.add("dark");
+    localStorage.setItem("dark", "true");
+  } else{
+    element.classList.remove("dark");
+    localStorage.setItem("dark", "false");
+  }
+
+} 
+
+</script>
+</body>
+</html>
+
+
